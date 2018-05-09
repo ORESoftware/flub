@@ -1,0 +1,37 @@
+{
+  "name": "flub",
+  "version": "0.0.101",
+  "description": "Semver-oriented TypeScript library skeleton.",
+  "main": "dist/index.js",
+  "bin": {
+    "xxx-TODO-flub": "dist/cli.js"
+  },
+  "types": "dist/index.d.ts",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "test": "suman test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/flub.git"
+  },
+  "keywords": [
+    "typescript",
+    "library",
+    "skeleton",
+    "scaffold"
+  ],
+  "author": "TODO Yo.Mama",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/your-org/flub/issues"
+  },
+  "homepage": "https://github.com/your-org/flub#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/core-js": "^0.9.46",
+    "@types/express": "^4.11.1",
+    "@types/node": "^9.6.2",
+    "express": "^4.16.3"
+  }
+}
