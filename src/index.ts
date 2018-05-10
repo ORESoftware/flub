@@ -21,7 +21,6 @@ export const middleware = function(opts: FlubOpts){
   
   
   return <RequestHandler>function(req,res,next){
-  
     
     // cp.on('message', function(){
     //    res.json({received: true});
@@ -30,6 +29,8 @@ export const middleware = function(opts: FlubOpts){
     if(req.socket !== res.socket){
        throw new Error('fooo');
     }
+    
+    req.socket.xxx = 'zzz';
     
     cp.send('handle', req.socket);
     

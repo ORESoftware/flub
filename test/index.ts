@@ -5,7 +5,9 @@ import cp = require("child_process");
 const childPath = path.resolve(__dirname + '/../dist/child.js');
 const k = cp.fork(childPath);
 
-const server = net.createServer({pauseOnConnect: true});
+// const server = net.createServer({pauseOnConnect: true});
+
+const server = net.createServer({pauseOnConnect: false});
 
 server.on('connection', (socket: Socket) => {
   
