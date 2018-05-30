@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 'use strict';
 
-process.on('message', function (m, v) {
+process.on('message', function (m, socket) {
   
-  console.log('here is the zoom...', v.m);
+  console.log('here is the zoom...');
   
-  const socket = v && v.socket;
+  const name = 'foo:';
   
-  if (m === 'handle' && socket) {
+  if (String(m).startsWith(name) && socket) {
     
-    console.log('got the socket with handle...');
+    const msg = JSON.parse(String(m).slice(name.length));
+    
+    console.log('got the socket with handle...', msg);
     console.log('socket.xxx',socket.xxx);
     
     socket.write([
@@ -24,7 +26,7 @@ process.on('message', function (m, v) {
     <h1> Example </h1>
   `);
     
-    socket.end('foobar!!!');
+    socket.end('foobar!!!' + msg.some);
   }
   else if(socket){
     // socket.end('wtf! lol\n');

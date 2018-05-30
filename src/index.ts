@@ -10,6 +10,10 @@ export interface FlubOpts {
   cp?: ChildProcess
 }
 
+export const r2gSmokeTest = function () {
+  return true;
+};
+
 export const middleware = function(opts: FlubOpts){
   
   const cp = opts && (opts.cp || opts.child);
